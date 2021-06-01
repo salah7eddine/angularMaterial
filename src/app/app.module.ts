@@ -15,9 +15,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
-  declarations: [AppComponent, DataTableComponent, MainNavComponent],
+  declarations: [AppComponent, DataTableComponent, MainNavComponent, HomeComponent, AboutComponent, InfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
