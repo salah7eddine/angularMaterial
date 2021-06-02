@@ -27,7 +27,6 @@ import { RadarChartComponent } from './components/ChartJs/radar-chart/radar-char
 import { PieChartComponent } from './components/ChartJs/pie-chart/pie-chart.component';
 import { BubbleChartComponent } from './components/ChartJs/bubble-chart/bubble-chart.component';
 import { LineChartComponent } from './components/ChartJs/line-chart/line-chart.component';
-import { BarD3jsComponent } from './components/D3js/bar-d3js/bar-d3js.component';
 import { DoughnutD3jsComponent } from './components/D3js-Chart/doughnut-d3js/doughnut-d3js.component';
 import { D3jsComponent } from './components/D3js/d3js.component';
 
@@ -47,7 +46,6 @@ import { D3jsComponent } from './components/D3js/d3js.component';
     PieChartComponent,
     BubbleChartComponent,
     LineChartComponent,
-    BarD3jsComponent,
     D3jsComponent,
     DoughnutD3jsComponent,
   ],
