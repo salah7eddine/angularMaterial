@@ -19,14 +19,17 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { InfoComponent } from './info/info.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChartsComponent } from './components/charts/charts.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import { DoughnutChartComponent } from './components/doughnut-chart/doughnut-chart.component';
-import { RadarChartComponent } from './components/radar-chart/radar-chart.component';
-import { PieChartComponent } from './components/pie-chart/pie-chart.component';
-import { BubbleChartComponent } from './components/bubble-chart/bubble-chart.component';
-import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { BarChartComponent } from './components/ChartJs/bar-chart/bar-chart.component';
+import { DoughnutChartComponent } from './components/ChartJs/doughnut-chart/doughnut-chart.component';
+import { DashboardComponent } from './components/ChartJs/dashboard/dashboard.component';
+import { RadarChartComponent } from './components/ChartJs/radar-chart/radar-chart.component';
+import { PieChartComponent } from './components/ChartJs/pie-chart/pie-chart.component';
+import { BubbleChartComponent } from './components/ChartJs/bubble-chart/bubble-chart.component';
+import { LineChartComponent } from './components/ChartJs/line-chart/line-chart.component';
+import { BarD3jsComponent } from './components/D3js/bar-d3js/bar-d3js.component';
+import { DoughnutD3jsComponent } from './components/D3js-Chart/doughnut-d3js/doughnut-d3js.component';
+import { D3jsComponent } from './components/D3js/d3js.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
     PieChartComponent,
     BubbleChartComponent,
     LineChartComponent,
+    BarD3jsComponent,
+    D3jsComponent,
+    DoughnutD3jsComponent,
   ],
   imports: [
     BrowserModule,
