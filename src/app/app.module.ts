@@ -29,6 +29,10 @@ import { BubbleChartComponent } from './components/ChartJs/bubble-chart/bubble-c
 import { LineChartComponent } from './components/ChartJs/line-chart/line-chart.component';
 import { DoughnutD3jsComponent } from './components/D3js-Chart/doughnut-d3js/doughnut-d3js.component';
 import { D3jsComponent } from './components/D3js/d3js.component';
+import { BarD3jsComponent } from './components/D3js-Chart/bar-d3js/bar-d3js.component';
+import { PieD3jsComponent } from './components/D3js-Chart/pie-d3js/pie-d3js.component';
+import { ScatterD3jsComponent } from './components/D3js-Chart/scatter-d3js/scatter-d3js.component';
+import { AreaD3jsComponent } from './components/D3js-Chart/area-d3js/area-d3js.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,10 @@ import { D3jsComponent } from './components/D3js/d3js.component';
     LineChartComponent,
     D3jsComponent,
     DoughnutD3jsComponent,
+    BarD3jsComponent,
+    PieD3jsComponent,
+    ScatterD3jsComponent,
+    AreaD3jsComponent,
   ],
   imports: [
     BrowserModule,

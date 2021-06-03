@@ -4,11 +4,10 @@
     [opened]="(isHandset$ | async) === false">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-
       <a mat-list-item [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
       <a mat-list-item [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
       <a mat-list-item [routerLink]="['/info']" routerLinkActive="router-link-active">Info</a>
-      <a mat-list-item [routerLink]="['/info-D3js']" routerLinkActive="router-link-active">info-D3js</a>
+      <a mat-list-item [routerLink]="['/info-d3js']" routerLinkActive="router-link-active">info-D3js</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -17,12 +16,12 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>angularMaterial</span>
+      <span>Angular Material</span>
       <span class="spacer">
         <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
         <a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
         <a [routerLink]="['/info']" routerLinkActive="router-link-active">Info</a>
-        <a [routerLink]="['/info-D3js']" routerLinkActive="router-link-active">info-D3js</a>
+        <a [routerLink]="['/info-d3js']" routerLinkActive="router-link-active">info-D3js</a>
       </span>
     </mat-toolbar>
     <!-- Add Content Here -->

@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'info', component: InfoComponent },
-  { path: 'info-D3js', component: D3jsComponent },
+  { path: 'info-d3js', component: D3jsComponent },
 ];
 
 @NgModule({

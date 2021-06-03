@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
-  selector: 'app-bar-d3js',
-  templateUrl: './bar-d3js.component.html',
-  styleUrls: ['./bar-d3js.component.css'],
+  selector: 'app-scatter-d3js',
+  templateUrl: './scatter-d3js.component.html',
+  styleUrls: ['./scatter-d3js.component.css'],
 })
-export class BarD3jsComponent implements OnInit {
+export class ScatterD3jsComponent implements OnInit {
   private data = [
     { Framework: 'Vue', Stars: '166443', Released: '2014' },
     { Framework: 'React', Stars: '150793', Released: '2013' },
@@ -23,12 +23,12 @@ export class BarD3jsComponent implements OnInit {
 
   ngOnInit(): void {
     this.createSvg();
-    this.drawBars(this.data);
+    this.drawPlot();
   }
 
   private createSvg(): void {
     this.svg = d3
-      .select('figure#bar')
+      .select('figure#scatter')
       .append('svg')
       .attr('width', this.width + this.margin * 2)
       .attr('height', this.height + this.margin * 2)
@@ -36,39 +36,39 @@ export class BarD3jsComponent implements OnInit {
       .attr('transform', 'translate(' + this.margin + ',' + this.margin + ')');
   }
 
-  private drawBars(data: any[]): void {
-    // Create the X-axis band scale
-    const x = d3
-      .scaleBand()
-      .range([0, this.width])
-      .domain(data.map((d) => d.Framework))
-      .padding(0.2);
-
-    // Draw the X-axis on the DOM
+  private drawPlot(): void {
+    // Add X axis
+    const x = d3.scaleLinear().domain([2009, 2017]).range([0, this.width]);
     this.svg
       .append('g')
       .attr('transform', 'translate(0,' + this.height + ')')
-      .call(d3.axisBottom(x))
-      .selectAll('text')
-      .attr('transform', 'translate(-10,0)rotate(-45)')
-      .style('text-anchor', 'end');
+      .call(d3.axisBottom(x).tickFormat(d3.format('d')));
 
-    // Create the Y-axis band scale
+    // Add Y axis
     const y = d3.scaleLinear().domain([0, 200000]).range([this.height, 0]);
-
-    // Draw the Y-axis on the DOM
     this.svg.append('g').call(d3.axisLeft(y));
 
-    // Create and fill the bars
-    this.svg
-      .selectAll('bars')
-      .data(data)
+    // Add dots
+    const dots = this.svg.append('g');
+    dots
+      .selectAll('dot')
+      .data(this.data)
       .enter()
-      .append('rect')
-      .attr('x', (d: any) => x(d.Framework))
-      .attr('y', (d: any) => y(d.Stars))
-      .attr('width', x.bandwidth())
-      .attr('height', (d: any) => this.height - y(d.Stars))
-      .attr('fill', '#d04a35');
+      .append('circle')
+      .attr('cx', (d: any) => x(d.Released))
+      .attr('cy', (d: any) => y(d.Stars))
+      .attr('r', 7)
+      .style('opacity', 0.5)
+      .style('fill', '#69b3a2');
+
+    // Add labels
+    dots
+      .selectAll('text')
+      .data(this.data)
+      .enter()
+      .append('text')
+      .text((d: any) => d.Framework)
+      .attr('x', (d: any) => x(d.Released))
+      .attr('y', (d: any) => y(d.Stars));
   }
 }
