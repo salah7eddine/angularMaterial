@@ -25,4 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 # angularMaterial
+
+# "vega": "^5.20.2",
+
+# "vega-embed": "^6.18.2",
+
+# "vega-lite": "^4.17.0",

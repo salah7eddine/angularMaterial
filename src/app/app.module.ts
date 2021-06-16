@@ -33,6 +33,9 @@ import { BarD3jsComponent } from './components/D3js-Chart/bar-d3js/bar-d3js.comp
 import { PieD3jsComponent } from './components/D3js-Chart/pie-d3js/pie-d3js.component';
 import { ScatterD3jsComponent } from './components/D3js-Chart/scatter-d3js/scatter-d3js.component';
 import { AreaD3jsComponent } from './components/D3js-Chart/area-d3js/area-d3js.component';
+import { VegaChartComponent } from './components/vega-chart/vega-chart.component';
+import { VegaComponent } from './components/vega/vega.component';
+import { WorkComponent } from './components/work/work.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,9 @@ import { AreaD3jsComponent } from './components/D3js-Chart/area-d3js/area-d3js.c
     PieD3jsComponent,
     ScatterD3jsComponent,
     AreaD3jsComponent,
+    VegaChartComponent,
+    VegaComponent,
+    WorkComponent,
   ],
   imports: [
     BrowserModule,

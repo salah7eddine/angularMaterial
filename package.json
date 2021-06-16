@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "dev": "ng serve -o",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -24,6 +25,7 @@
     "bootstrap": "^5.0.1",
     "chart.js": "^2.9.3",
     "d3": "^6.7.0",
+    "fast-json-stable-stringify": "^2.1.0",
     "ng2-charts": "^2.3.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
