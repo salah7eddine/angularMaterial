@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
@@ -77,6 +79,7 @@ import { WorkComponent } from './components/work/work.component';
     MatIconModule,
     MatListModule,
     ChartsModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

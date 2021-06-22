@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class WorkComponent implements OnInit {
   showFiller = false;
 
+  items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+
   constructor() {}
 
   ngOnInit(): void {}

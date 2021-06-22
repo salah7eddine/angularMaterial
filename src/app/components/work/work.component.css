@@ -13,14 +13,23 @@ mat-drawer-container {
 } */
 
 
+.sideNav {
+  width: 300px;
+}
 
 .sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+   display: flex;
+   height: 100%;
+   width: 100%;
 }
 
-.sidenav {
-  padding: 20px;
+.example-viewport {
+  height: 100%;
+  width: 200px;
+  border: 0px solid black;
 }
+
+.example-item {
+  height: 50px;
+}
+
