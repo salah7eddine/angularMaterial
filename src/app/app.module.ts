@@ -38,6 +38,8 @@ import { AreaD3jsComponent } from './components/D3js-Chart/area-d3js/area-d3js.c
 import { VegaChartComponent } from './components/vega-chart/vega-chart.component';
 import { VegaComponent } from './components/vega/vega.component';
 import { WorkComponent } from './components/work/work.component';
+import { ScrollComponent } from './scroll/scroll.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,7 @@ import { WorkComponent } from './components/work/work.component';
     VegaChartComponent,
     VegaComponent,
     WorkComponent,
+    ScrollComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,6 +83,7 @@ import { WorkComponent } from './components/work/work.component';
     MatListModule,
     ChartsModule,
     ScrollingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

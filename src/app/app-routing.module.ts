@@ -6,6 +6,7 @@ import { VegaComponent } from './components/vega/vega.component';
 import { WorkComponent } from './components/work/work.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
+import { ScrollComponent } from './scroll/scroll.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'info-d3js', component: D3jsComponent },
   { path: 'vega', component: VegaComponent },
   { path: 'work', component: WorkComponent },
+  { path: 'scroll', component: ScrollComponent },
 ];
 
 @NgModule({
