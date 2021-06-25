@@ -96,12 +96,10 @@ export class DoughnutD3jsComponent implements OnInit {
       .attr('stroke', 'white')
       .style('stroke-width', '2px')
       .style('opacity', 0.7);
-
-   
   }
 
   createPolylines() {
- // Add the polylines between chart and labels:
+    // Add the polylines between chart and labels:
     this.svg
       .selectAll('allPolylines')
       // .transition()
