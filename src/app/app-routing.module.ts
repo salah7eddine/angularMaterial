@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { D3jsComponent } from './components/D3js/d3js.component';
+import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.component';
 import { VegaComponent } from './components/vega/vega.component';
 import { WorkComponent } from './components/work/work.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'vega', component: VegaComponent },
   { path: 'work', component: WorkComponent },
   { path: 'scroll', component: ScrollComponent },
+  { path: 'stickyMenu', component: StickyMenuComponent },
 ];
 
 @NgModule({

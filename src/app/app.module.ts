@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ChartsModule } from 'ng2-charts';
 
@@ -40,6 +41,10 @@ import { VegaComponent } from './components/vega/vega.component';
 import { WorkComponent } from './components/work/work.component';
 import { ScrollComponent } from './scroll/scroll.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Doughnut2ChartComponent } from './components/ChartJs/doughnut2-chart/doughnut2-chart.component';
+import { BarStackedComponent } from './components/ChartJs/bar-stacked/bar-stacked.component';
+import { BarStacked2Component } from './components/ChartJs/bar-stacked2/bar-stacked2.component';
+import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +72,10 @@ import { HttpClientModule } from '@angular/common/http';
     VegaComponent,
     WorkComponent,
     ScrollComponent,
+    Doughnut2ChartComponent,
+    BarStackedComponent,
+    BarStacked2Component,
+    StickyMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +93,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsModule,
     ScrollingModule,
     HttpClientModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

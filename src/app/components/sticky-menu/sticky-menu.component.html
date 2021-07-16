@@ -1,0 +1,46 @@
+<!-- this is the main navbar -->
+<!-- <nav class="navbar is-light">
+  <div class="navbar-brand">
+    <a class="navbar-item title is-3">
+      myCompany
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item is-active">menuItem1</a>
+      <a class="navbar-item">menuItem2</a>
+    </div>
+  </div>
+</nav> -->
+
+<!-- this is the sticky menu -->
+<div class="container py-lg-3 sticky-top" #stickyMenu [class.sticky]="sticky">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          This is the expansion title
+        </mat-panel-title>
+        <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is the primary content of the panel.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Self aware panel
+        </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>
+
+<!-- this is a fake long content; we need it so we can scroll down -->
+<div class="content"></div>

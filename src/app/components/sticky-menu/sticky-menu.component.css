@@ -1,0 +1,20 @@
+.sticky{
+  position: fixed;
+  top: 0;
+  padding-top: 200px;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}
+
+.py-lg-3 {
+  padding-top: 5rem !important;
+}
+
+.content{
+  height: 200vh;
+}
+
+.mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
