@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 import { ChartsModule } from 'ng2-charts';
 
@@ -90,6 +92,7 @@ import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.compon
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatChipsModule,
     ChartsModule,
     ScrollingModule,
     HttpClientModule,
@@ -98,4 +101,4 @@ import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.compon
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

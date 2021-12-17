@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
+import { Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-bar-stacked2',
@@ -14,7 +15,8 @@ export class BarStacked2Component implements OnInit {
       display: false,
     },
     tooltips: {
-      enabled: false,
+      enabled: true,
+      caretSize: 200
     },
     plugins: {
       datalabels: {
@@ -23,7 +25,7 @@ export class BarStacked2Component implements OnInit {
     },
     //  scale: {},
     scales: {
-      display: false,
+      display: true,
       stepSize: 5,
       yAxes: [
         {
@@ -47,16 +49,45 @@ export class BarStacked2Component implements OnInit {
       padding: 0,
     },
   };
+
+  colors: Color[] = [
+    {
+      pointRadius: 10,
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)',
+        'rgb(253,228,54)',
+        'rgb(49,253,186)',
+        'rgb(253, 107, 40)',
+        'rgb(183,110,146)',
+        'rgb(71,232,0)',
+        'rgb(105,254,44)',
+        'rgb(59,204,234)',
+        'rgb(199,22,59)',
+        'rgb(188,154,114)',
+        'rgb(18,160,21)',
+      ],
+    },
+  ];
+
   public barChartType: ChartType = 'horizontalBar';
   public barChartLegend = true;
 
   public barChartData: ChartDataSets[] = [
-    { data: [2], label: 'Approved', stack: 'a' },
-    { data: [7], label: 'Accepted', stack: 'a' },
-    { data: [1], label: 'Open', stack: 'a' },
-    { data: [9], label: 'In Progress', stack: 'a' },
+    { data: [0.0], label: 'EUROPE', stack: 'a' },
+    { data: [5836.0], label: 'FRANCE', stack: 'a' },
+    { data: [97.0], label: 'GERMANY', stack: 'a' },
+    { data: [212.0], label: 'UK', stack: 'a' },
+    { data: [36.0], label: 'ITALY', stack: 'a' },
+    { data: [33.0], label: 'SPAIN', stack: 'a' },
+    { data: [0.0], label: 'UNITED_STATES', stack: 'a' },
+    { data: [0.0], label: 'CHINA', stack: 'a' },
+    { data: [0.0], label: 'JAPAN', stack: 'a' },
   ];
-  public barChartLabels: string[] = [];
+  //'EUROPE', 'FRANCE', 'GERMANY', 'UK', 'ITALY', 'SPAIN', 'UNITED_STATES', 'CHINA', 'JAPAN'
+  public barChartLabels: string[] = ['Geographical area'];
+  
 
   constructor() {}
 

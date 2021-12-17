@@ -1,1 +1,13 @@
-<p>about works!</p>
+<div class="mb-3 mt-3" style="height: auto; width: 500px;">
+  <mat-chip-list aria-label="filter selection">
+    <label *ngFor="let criteria of filter, let i = index" for="{{'checkbox_'+i}}">
+      <mat-chip [selectable]="selectable" color="primary" class="">
+        <input class="checkbox me-1" type="checkbox" (change)="updateAllComplete(filter)" value="criteria.checked"
+          id="{{'checkbox_'+i}}" name="criteria" [checked]="criteria.checked">
+        <span class="me-1">{{criteria.checked}} -- {{criteria.name}}</span>
+        <mat-icon matSuffix class="iconInfo mt-2">info
+        </mat-icon>
+      </mat-chip>
+    </label>
+  </mat-chip-list>
+</div>

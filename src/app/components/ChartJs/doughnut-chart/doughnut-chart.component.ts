@@ -10,10 +10,10 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
   styleUrls: ['./doughnut-chart.component.css'],
 })
 export class DoughnutChartComponent implements OnInit {
-  data: any = [55, 25, 20];
+  data: any = [101, 0, 42054, 0];
 
-  doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla'];
-  doughnutChartData: MultiDataSet = [[55, 25, 20]];
+  doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla', "temp"];
+  doughnutChartData: MultiDataSet = [this.data];
   doughnutChartType: ChartType = 'doughnut';
   doughnutChartLabel: ChartLegendLabelOptions = {
     boxWidth: 50,

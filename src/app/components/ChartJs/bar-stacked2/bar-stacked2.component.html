@@ -1,9 +1,9 @@
 <div class="chart-wrapper p-5 m-5">
-  <div class="chart-container" style="position: absolute; height:40vh; width:7vw">
+  <div class="chart-container">
 
     <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
       [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
-      (chartClick)="chartClicked($event)"></canvas>
+      (chartClick)="chartClicked($event)" [colors]="colors" class="m-0 p-0 stackedBar" ></canvas>
     <!-- <button mat-button (click)="randomize()">Update</button> -->
   </div>
 </div>
