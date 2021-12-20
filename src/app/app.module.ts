@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,6 +47,7 @@ import { Doughnut2ChartComponent } from './components/ChartJs/doughnut2-chart/do
 import { BarStackedComponent } from './components/ChartJs/bar-stacked/bar-stacked.component';
 import { BarStacked2Component } from './components/ChartJs/bar-stacked2/bar-stacked2.component';
 import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.component';
+import { CustomErrorHandlerServiceService } from './services/custom-error-handler-service.service';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,7 @@ import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.compon
     HttpClientModule,
     MatExpansionModule,
   ],
-  providers: [],
+  providers: [{ provide: ErrorHandler, useClass: CustomErrorHandlerServiceService }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

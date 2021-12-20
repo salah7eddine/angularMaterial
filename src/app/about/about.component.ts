@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggerServiceService } from '../services/logger-service.service';
+import { WorkWithApiService } from '../services/work-with-api.service';
 
 @Component({
   selector: 'app-about',
@@ -11,6 +13,8 @@ export class AboutComponent implements OnInit {
   x = "2";
   y = "10"
 
+  posts: any;
+
 
   filter = [
     { name: "filter1", checked: true },
@@ -20,15 +24,21 @@ export class AboutComponent implements OnInit {
     { name: "filter5", checked: false },
     { name: "filter6", checked: true },
   ]
-  constructor() { }
+  constructor(private workWithApiService: WorkWithApiService, private loggerService: LoggerServiceService) { }
 
   ngOnInit(): void {
-    console.log("x < y")
-    console.log(this.x < this.y)
+    this.getDataForPosts();
   }
 
   updateAllComplete(filter: any) {
     console.log(filter)
+  }
+
+
+  getDataForPosts() {
+    this.workWithApiService.getPostsData().subscribe(data => {
+      this.posts = data;
+    })
   }
 
 }

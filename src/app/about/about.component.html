@@ -11,3 +11,25 @@
     </label>
   </mat-chip-list>
 </div>
+
+<hr>
+
+<div class="container-fluid">
+  <p class="fs-4">Posts</p>
+
+  <!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of posts">{{post.title}}</li>
+  </ul> -->
+
+
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action" aria-current="true" *ngFor="let post of posts">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{post.title}}</h5>
+        <small>{{post.id}}</small>
+      </div>
+      <!-- <p class="mb-1">Some placeholder content in a paragraph.</p> -->
+      <small>{{post.body}}</small>
+    </a>
+  </div>
+</div>
