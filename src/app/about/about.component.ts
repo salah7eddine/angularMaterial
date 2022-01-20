@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { LoggerServiceService } from '../services/logger-service.service';
 import { WorkWithApiService } from '../services/work-with-api.service';
 
@@ -8,6 +9,11 @@ import { WorkWithApiService } from '../services/work-with-api.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+  dateRange = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl()
+  });
 
   selectable = true;
   x = "2";

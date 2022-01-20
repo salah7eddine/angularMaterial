@@ -1,0 +1,93 @@
+<!-- <div class="container-fluid m-auto p-auto" style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <form [formGroup]="myForm" novalidate>
+    <div class="form-group">
+      <label class="center-block">Username:
+        <input class="form-control" formControlName="username">
+      </label>
+    </div>
+    <div
+      *ngIf="myForm.controls['username'].invalid && (myForm.controls['username'].dirty || myForm.controls['username'].touched)"
+      class="alert">
+      <div *ngIf="myForm.controls['username'].errors">
+        Please enter username
+      </div>
+    </div>
+  </form>
+  <p>myForm value: {{ myForm.value | json }}</p>
+  <p>myForm status: {{ myForm.status | json }}</p>
+  <p>myForm status: {{ myForm.controls['username'].errors | json }}</p>
+  <p>myForm status: {{ myForm.controls['username'].errors | json }}</p>
+</div> -->
+
+<div class="container-fluid">
+  <!-- <mat-list class="content">
+    <mat-list-item *ngFor="let item of listItems">
+      <img matListAvatar [src]="item.image">
+      <h3 matLine> {{item.title}} </h3>
+      <p matLine>
+        <span> {{item.content}} </span>
+      </p>
+      <button mat-icon-button [matMenuTriggerFor]="itemMenu">
+        <mat-icon>
+          more_vert
+        </mat-icon>
+      </button>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-menu #itemMenu="matMenu">
+    <button mat-menu-item>
+      Option 1
+    </button>
+    <button mat-menu-item>
+      Option 2
+    </button>
+    <button mat-menu-item>
+      Option 3
+    </button>
+  </mat-menu> -->
+
+  <!-- <mat-toolbar color="primary">
+    Fast, infinite scroll list
+  </mat-toolbar> -->
+
+
+  <cdk-virtual-scroll-viewport #scroller itemSize="72" class="content">
+    <mat-list>
+      <ng-container *cdkVirtualFor="let item of listItems">
+        <mat-list-item>
+          <img matListAvatar [src]="item.image">
+          <h3 matLine> {{item.title}} </h3>
+          <p matLine>
+            <span> {{item.content}} </span>
+          </p>
+          <button mat-icon-button [matMenuTriggerFor]="itemMenu">
+            <mat-icon>
+              more_vert
+            </mat-icon>
+          </button>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </ng-container>
+      <div class="spinner-item" *ngIf="loading">
+        <mat-progress-spinner [mode]="'indeterminate'" [diameter]="50">
+        </mat-progress-spinner>
+      </div>
+    </mat-list>
+    <mat-menu #itemMenu="matMenu">
+      <button mat-menu-item>
+        Option 1
+      </button>
+      <button mat-menu-item>
+        Option 2
+      </button>
+      <button mat-menu-item>
+        Option 3
+      </button>
+    </mat-menu>
+  </cdk-virtual-scroll-viewport>
+</div>

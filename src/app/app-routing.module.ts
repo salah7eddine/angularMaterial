@@ -8,6 +8,7 @@ import { WorkComponent } from './components/work/work.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { SomeFormsComponent } from './some-forms/some-forms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,10 +20,11 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'scroll', component: ScrollComponent },
   { path: 'stickyMenu', component: StickyMenuComponent },
+  { path: 'someForms', component: SomeFormsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

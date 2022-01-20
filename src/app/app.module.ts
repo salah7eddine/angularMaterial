@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 import { ChartsModule } from 'ng2-charts';
@@ -21,6 +23,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { InfoComponent } from './info/info.component';
@@ -48,6 +55,8 @@ import { BarStackedComponent } from './components/ChartJs/bar-stacked/bar-stacke
 import { BarStacked2Component } from './components/ChartJs/bar-stacked2/bar-stacked2.component';
 import { StickyMenuComponent } from './components/sticky-menu/sticky-menu.component';
 import { CustomErrorHandlerServiceService } from './services/custom-error-handler-service.service';
+import { SomeFormsComponent } from './some-forms/some-forms.component';
+
 
 @NgModule({
   declarations: [
@@ -79,6 +88,7 @@ import { CustomErrorHandlerServiceService } from './services/custom-error-handle
     BarStackedComponent,
     BarStacked2Component,
     StickyMenuComponent,
+    SomeFormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,6 +108,12 @@ import { CustomErrorHandlerServiceService } from './services/custom-error-handle
     ScrollingModule,
     HttpClientModule,
     MatExpansionModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [{ provide: ErrorHandler, useClass: CustomErrorHandlerServiceService }],
   bootstrap: [AppComponent],
